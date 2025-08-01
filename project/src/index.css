@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Enhanced text glow effects */
+.text-glow {
+  text-shadow: 
+    0 0 10px rgba(245, 158, 11, 0.5),
+    0 0 20px rgba(245, 158, 11, 0.3),
+    0 0 30px rgba(245, 158, 11, 0.2),
+    0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out;
+}
+
+.animate-modal-appear {
+  animation: modal-appear 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Smooth scrolling and performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #fef7ed 0%, #fed7aa 100%);
+}
+
+/* Optimize for performance */
+.zoom-container {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
