@@ -86,28 +86,30 @@ export const ZoomContainer: React.FC = () => {
               Rice Of Fate
             </span>
           </h1>
-          <p 
-            className="text-xl md:text-2xl font-light text-amber-700 tracking-wider opacity-90"
-            style={{
-              textShadow: '0 2px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(245, 158, 11, 0.2)',
-            }}
-          >
-            ഓരോ അരിമണിയിലും അത് കഴിക്കുന്ന ആളുടെ പേര് എഴുതിയിട്ടുണ്ട്.
-          </p>
+         <p 
+  className="text-xl md:text-2xl font-bold text-amber-700 tracking-wider opacity-90"
+  style={{
+    textShadow: '0 2px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(245, 158, 11, 0.2)',
+  }}
+>
+  ഓരോ അരിമണിയിലും അത് കഴിക്കുന്ന ആളുടെ പേര് എഴുതിയിട്ടുണ്ട്.
+</p>
+
         </div>
       )}
 
       {/* Click indicator when not at max zoom */}
-      {!showModal && zoomLevel < maxZoom && (
-        <div 
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-amber-800 text-lg font-light tracking-wide opacity-80 animate-pulse pointer-events-none"
-          style={{
-            textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
-          }}
-        >
-          Click to zoom deeper
-        </div>
-      )}
+{!showModal && zoomLevel < maxZoom && (
+  <div 
+    className="absolute bottom-16 left-1/2 transform -translate-x-1/2 text-amber-800 text-2xl font-light tracking-wide opacity-90 animate-pulse pointer-events-none whitespace-nowrap"
+    style={{
+      textShadow: '0 2px 6px rgba(0, 0, 0, 0.35)',
+    }}
+  >
+    Tap anywhere to zoom in and discover the name hidden on a grain of rice.
+  </div>
+)}
+
 
       {/* Zoom level indicator */}
       <div className="absolute top-8 left-8 text-amber-700 text-sm font-mono bg-white/30 px-4 py-2 rounded-full backdrop-blur-sm border border-amber-200/30 shadow-lg">
