@@ -94,14 +94,7 @@ const names = [
   "Aryananda Aryananda",
   "Angitha M",
   "Khadeeja Nasri",
-  "Parvathi Pratheesh Kumar",
-  "Sneha Shine",
-  "Sandra S Raj",
-  "Niya Santhosh",
-  "Rohan Vijesh",
-  "Hadhiya Parveen cm",
-  "Nihara Praveenlal",
-  "Devasankari M R"
+
 ];
 export const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const [astroFact, setAstroFact] = useState<string>("");
