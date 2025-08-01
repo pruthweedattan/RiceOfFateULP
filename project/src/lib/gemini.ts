@@ -20,6 +20,6 @@ export async function getFunnyAstroFact(name: string) {
     return text.trim();
   } catch (error) {
     console.error("Gemini error:", error);
-    return "The stars refuse to comment on your destiny today.";
+    return "Stars refuse to comment on your destiny today.";
   }
 }
