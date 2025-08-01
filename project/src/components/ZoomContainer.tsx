@@ -120,7 +120,7 @@ export const ZoomContainer: React.FC = () => {
       <Modal 
         isOpen={showModal} 
         onClose={resetZoom}
-        title="You've found the grain of truth."
+        //title="You've found the grain of truth."
       />
     </div>
   );
