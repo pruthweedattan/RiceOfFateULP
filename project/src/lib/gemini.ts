@@ -1,5 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
+//Gemini API KEY
 const genAI = new GoogleGenerativeAI('AIzaSyCyEVylRAyqGqUEbg8tpzyNweLvAa3QN0I');
 
 export async function getFunnyAstroFact(name: string) {
@@ -14,7 +15,7 @@ export async function getFunnyAstroFact(name: string) {
     // Try safe extraction
     const text = result.response?.text?.() 
               || result.response?.candidates?.[0]?.content?.parts?.[0]?.text 
-              || "The stars refuse to comment on your destiny today.";
+              || "The stars are silent on this one.";
 
     return text.trim();
   } catch (error) {
