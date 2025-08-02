@@ -15,7 +15,7 @@ export async function getFunnyAstroFact(name: string) {
     // Try safe extraction
     const text = result.response?.text?.() 
               || result.response?.candidates?.[0]?.content?.parts?.[0]?.text 
-              || "The stars are silent on this one.";
+              || "No mystical insights available today.";
 
     return text.trim();
   } catch (error) {
